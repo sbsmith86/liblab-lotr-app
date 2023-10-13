@@ -1,16 +1,12 @@
-// index.tsx
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <Layout>
       <h1>Welcome to the Lord of the Rings App</h1>
-      <ul>
-        <li><Link href="/characters">View Characters</Link></li>
-        <li><Link href="/movies">View Movies</Link></li>
-        <li><Link href="/quotes">View Quotes</Link></li>
-      </ul>
-    </div>
+      <p>Use navigation to view information</p>
+    </Layout>
   );
 };
 
