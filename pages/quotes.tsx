@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 // import MovieCard from '../components/MovieCard';
 import QuoteCard from '../components/QuoteCard';
+import Link from 'next/link';
 
 const Container = styled.div`
   text-align: center;
@@ -36,9 +37,16 @@ const QuotesPage: React.FC = () => {
   return (
     <Container>
       <Title>Lord of the Rings Quotes</Title>
-      {quotes.map((quote, index) => (
-        <QuoteCard key={index} quote={quote} />
-      ))}
+      <Link href="/">Back Home</Link>
+      <div>
+        {quotes.length ? (
+            quotes.map((quote: any, index: number) => (
+                <QuoteCard key={index} quote={quote} />
+            ))
+        ) : (
+            <p>Loading data...</p>
+        )}
+      </div>
     </Container>
   );
 };

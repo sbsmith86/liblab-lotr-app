@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import MovieCard from '../components/MovieCard';
+import Link from 'next/link';
 
 const Container = styled.div`
   text-align: center;
@@ -35,9 +36,16 @@ const MoviesPage: React.FC = () => {
   return (
     <Container>
       <Title>Lord of the Rings Movies</Title>
-      {movies.map((movie, index) => (
-        <MovieCard key={index} movie={movie} />
-      ))}
+      <Link href="/">Back Home</Link>
+      <div>
+        {movies.length ? (
+            movies.map((movie: any, index: number) => (
+                <MovieCard key={index} movie={movie} />
+            ))
+        ) : (
+            <p>Loading data...</p>
+        )}
+      </div>
     </Container>
   );
 };
