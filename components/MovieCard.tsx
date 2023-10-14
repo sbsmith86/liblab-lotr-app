@@ -14,7 +14,7 @@ const Card = styled.div`
   margin: 1rem;
 `;
 
-const MovieCard: React.FC<MovieProps> = ({ movie }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   return (
     <Card>
       <h2>{movie.name}</h2>

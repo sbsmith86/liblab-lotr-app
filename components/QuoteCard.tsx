@@ -14,7 +14,7 @@ const Card = styled.div`
   margin: 1rem;
 `;
 
-const QuoteCard: React.FC<QuoteProps> = ({ quote }) => {
+const QuoteCard: React.FC<QuoteCardProps> = ({ quote }) => {
   return (
     <Card>
       <h2>"{quote.dialog}"</h2>
