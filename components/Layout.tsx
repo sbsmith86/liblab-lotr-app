@@ -19,7 +19,7 @@ const Layout = ({ children, title = 'Shae Smith LibLab Takehome' }: Props) => (
         <Link href="/">Home</Link> |{' '}
         <Link href="/characters">Characters</Link> |{' '}
         <Link href="/quotes">Quotes</Link> |{' '}
-        <Link href="/movies">Movies</Link> |{' '}
+        <Link href="/movies">Movies</Link>
       </nav>
     </header>
     {children}
