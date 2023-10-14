@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const Container = styled.div`
-  text-align: center;
+  text-align: left;
   margin: 2rem;
   font-family: Arial, sans-serif;
 `;
@@ -41,6 +41,7 @@ const QuotesPage: React.FC = () => {
         <Title>Lord of the Rings Quotes</Title>
         <Link href="/">Back Home</Link>
         <div>
+          <ul>
             {quotes.length ? (
                 quotes.map((quote: any, index: number) => (
                     <QuoteCard key={index} quote={quote} />
@@ -48,6 +49,7 @@ const QuotesPage: React.FC = () => {
             ) : (
                 <p>Loading data...</p>
             )}
+          </ul>
         </div>
         </Container>
     </Layout>

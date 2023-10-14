@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const Container = styled.div`
-  text-align: center;
+  text-align: left;
   margin: 2rem;
   font-family: Arial, sans-serif;
 `;

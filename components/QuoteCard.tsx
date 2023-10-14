@@ -7,18 +7,9 @@ interface QuoteCardProps {
   };
 }
 
-const Card = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 1rem;
-  margin: 1rem;
-`;
-
 const QuoteCard: React.FC<QuoteCardProps> = ({ quote }) => {
   return (
-    <Card>
-      <h2>"{quote.dialog}"</h2>
-    </Card>
+      <li>"{quote.dialog}"</li>
   );
 };
 
